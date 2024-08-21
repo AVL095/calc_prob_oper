@@ -1,0 +1,83 @@
+﻿<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251">
+<title>Статистический аналиаз</title>
+</head>
+
+<link href="css/table_electron.css" rel="stylesheet">
+<link href="css/mymessage.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap.css.map" rel="stylesheet">
+<script src="js/graph.js"></script>
+<script src="js/graph_1.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/letters.js"></script>
+<script src="js/mymessage.js"></script>
+<script src="js/module.js"></script>
+<script src="js/table_electron.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="sproject.js"></script>
+<script src="saction.js"></script>
+
+<body  id="bdy" background="#eee" onLoad=TableCreate(TableAction1); style='text-align:center;font-family:Times New Roman;font-size:12pt;font-weight:bold;height: 100%; width: 100%'>
+<script>
+var  rowmax=45,colmax=22,znaki=4;
+lts();
+ 
+document.getElementById("bdy").style.zoom="1.5";
+</script>
+<br>
+<button class="btn btn-success" onClick=TableClear(TableAction1); title="Clear"><span class="glyphicon glyphicon-pencil"></span>Clear</button> 
+<button class="btn btn-success" onClick=TableSaveData(); title="Save"><span class="glyphicon glyphicon-pencil"></span>Save</button> 
+<button class="btn btn-success" onClick=TablePrint(); title="Result"><span class="glyphicon glyphicon-pencil"></span>Result</button> 
+<button class="btn btn-success" onClick=All(); title="All"><span class="glyphicon glyphicon-pencil"></span>Graphics</button> 
+
+<div class="btn-group">
+<button class="btn btn-warning glyphicon glyphicon-chevron-down dropdown-toggle" data-toggle="dropdown" title="Вариант">Данные</button>
+<ul class="dropdown-menu" role="menu">
+<script>
+var Data=[];
+Data[1]="Лонжерон регулярные испытания";
+Data[2]="Лонжерон программные испытания";
+Data[3]="Расчет ресурса методом снижения предела выносливости";
+Data[4]="Расчет ресурса по корректированной линейной гипотезе";
+m="";
+ for(i=1;i<Data.length;i++) {
+m=m+'<li><a  href="#"  onClick='+'TableData('+i+');title="'+i+'">Вариант №'+i+"; "+Data[i]+'</a></li>';
+}
+document.write(m);
+</script>
+</ul>
+</div>
+
+<div class="btn-group">
+<button class="btn btn-warning glyphicon glyphicon-chevron-down dropdown-toggle" data-toggle="dropdown" title="Вариант">Литература</button>
+<ul class="dropdown-menu" role="menu">
+<li><a href="lit/power.pdf"  title="Энергетическая модель">Энергетическая модель</a></li>
+<li><a href="lit/stat.pdf"  title="Методы статистического анализа">Методы статистического анализа</a></li>
+<li><a href="lit/prob.pdf"  title="Надежность механических систем">Надежность механических систем</a></li>
+<li class="divider"></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table id="table">
+ </table>
+<br><br>
+</body>
+</html>
