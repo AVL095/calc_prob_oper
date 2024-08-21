@@ -1,0 +1,46 @@
+input {
+  font-Family:Times New Roman;
+  font-Color:black;  
+}
+
+input:hover {
+    background-color: #eee;
+}
+
+input:focus{
+    background-color: #ccf;
+    width:100px;
+    font-size: 14px;
+    font-Family:Times New Roman;
+    font-Color:black;
+}
+
+input:not(:focus) {
+    font-size: 14px;
+    width:100px;
+    font-Family:Times New Roman;
+    font-Color:black;
+    text-align: left;
+}
+
+table {
+border-collapse: collapse;  
+}
+
+td {
+    font-size: 14px;
+    font-Family:Times New Roman;
+    border: 1px solid #999;
+   font-Color:black;  
+}
+
+tr:first-child td, th, td:first-child {
+    background-color: #ccc;
+    width:10px;
+    padding: 0px 0px;
+    font-weight:normall;
+    font-size: 10px;
+    text-align: center;
+   font-Color:black;  
+}
+
